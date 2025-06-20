@@ -30,7 +30,6 @@ export default function Header() {
             alt="Логотип"
             width={80}
             height={80}
-            className=""
           />
           Пан КальяНик
         </div>

@@ -34,10 +34,10 @@ export default function OffersSection() {
   return (
     <div ref={ref} className="min-h-[600px]">
       {isShow ? (
-        <section className=" bg-backgroud via-background py-20 px-10 sm:px-40 lg:px-20">
+        <section className=" bg-backgroud via-background py-20 px-20 sm:px-40 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 grid-rows-[repeat(3,500px)] lg:grid-rows-[500px] gap-10 w-full animate-fade-in-long">
             <div className="flex items-end justify-center border-1 border-border rounded-lg bg-hookahplace shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl">
-              <h3 className="text-center font-semibold font-heading text-2xl mb-2  ">
+              <h3 className="text-center font-semibold font-heading text-2xl mb-2">
                 Кальянная
               </h3>
             </div>
@@ -47,7 +47,7 @@ export default function OffersSection() {
               </h3>
             </div>
             <div className="flex items-end justify-center border-1 border-border rounded-lg bg-catering shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl">
-              <h3 className="text-center font-semibold font-heading text-2xl mb-2 ">
+              <h3 className="text-center font-semibold font-heading text-2xl mb-2">
                 Кейтеринг
               </h3>
             </div>

@@ -3,20 +3,23 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function HeroImage() {
   return (
-    <section className="min-h-[calc(100vh-113px)] bg-gradient-to-br to-muted via-background pt-24 md:pt-40 xl:pt-24 pb-16 animate-fade-in">
-      <div className="relative z-10 px-5 sm:px-10 md:px-20">
-        <div className="font-heading text-gradient text-5xl md:text-7xl text-center font-bold ">
-          Пан КальяНик
+    <section className="min-h-[calc(100vh-113px)] flex justify-center bg-gradient-to-br to-muted via-background pt-24 pb-16 animate-fade-in">
+      <div className="relative z-10 flex flex-col items-center justify-around px-5 md:px-20">
+        <div>
+          <div className="font-heading text-gradient text-4xl sm:text-5xl md:text-7xl text-center font-bold">
+            Пан КальяНик
+          </div>
+          <div className="font-heading text-foreground text-3xl sm:text-4xl md:text-6xl text-center font-bold">
+            Кальянный сервис
+          </div>
+
+          <div className="text-muted-foreground text-lg md:text-2xl lg:text-3xl text-center mt-10 md:mt-20 mb-5 mx-auto max-w-3xl">
+            Погрузитесь в атмосферу премиального отдыха и ароматного дыма.
+            Профессиональный подход, качественный табак и безупречный сервис на
+            любой площадке.
+          </div>
         </div>
-        <div className="font-heading text-foreground text-4xl md:text-6xl text-center font-bold">
-          Кальянный сервис
-        </div>
-        <div className="text-muted-foreground text-2xl text-center mt-5 mx-auto max-w-3xl md:mt-10">
-          Погрузитесь в атмосферу премиального отдыха и ароматного дыма.
-          Профессиональный подход, качественный табак и безупречный сервис на
-          любой площадке.
-        </div>
-        <div className="flex items-center justify-between text-center text-base/4 lg:w-7/12 mx-auto mt-5 text-muted-foreground">
+        <div className="flex items-start justify-between flex-col gap-5 md:flex-row lg:gap-10 text-center font-thin text-s md:text-lg lg:text-xl mx-auto mt-10 text-muted-foreground">
           <div className="flex items-center gap-1">
             <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
             Премиум табаки
