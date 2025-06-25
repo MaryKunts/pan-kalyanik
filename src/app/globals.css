@@ -73,4 +73,7 @@
   .bg-hookahplace {
     background: url(/hookahplace.png) center center/cover no-repeat ;
   }
+  .bg-autsource {
+    background: url(/autsource.png) center center/cover no-repeat;
+  }
 }

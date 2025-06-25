@@ -1,9 +1,18 @@
-import { faInstagram, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faTelegram,
+  faVk,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SocialMediaLinks() {
   return (
     <div className="justify-start gap-4 flex">
+      <a
+        href="https://vk.link/pan_kalyanik"
+        className="block rounded-full transition-colors duration-300 hover:text-accent">
+        <FontAwesomeIcon icon={faVk} size="2xl" />
+      </a>
       <a
         href="https://www.instagram.com/pan_kalyanik_bar/"
         className="block rounded-full transition-colors duration-300 hover:text-accent">

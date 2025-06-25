@@ -19,7 +19,7 @@ export default {
     extend: {
       fontFamily: {
         heading: ["Playfair Display", "serif"],
-        body: ["Inter", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
