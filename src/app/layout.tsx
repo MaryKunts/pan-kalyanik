@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Mulish } from "next/font/google";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
-const mulishSans = Mulish({
+const montserrat = Montserrat({
+  subsets: ["cyrillic"],
+});
+const playfair = Playfair_Display({
   subsets: ["cyrillic"],
 });
 
@@ -20,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" className={mulishSans.className}>
+    <html lang="ru" className={`${montserrat.className} ${playfair.className}`}>
       <body>{children}</body>
     </html>
   );
