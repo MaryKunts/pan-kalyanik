@@ -4,12 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
+const BUTTON_SCROLL_Y_OFFSET = 800;
+
 export default function ScrollToTopButton() {
   const [isShow, setIsShow] = useState(false);
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     const scrollEvent = () => {
-      if (window.scrollY >= 800) {
+      if (window.scrollY >= BUTTON_SCROLL_Y_OFFSET) {
         setIsShow(true);
       } else {
         setIsShow(false);
@@ -22,13 +31,6 @@ export default function ScrollToTopButton() {
       window.removeEventListener("scroll", scrollEvent);
     };
   }, []);
-
-  const handleScroll = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return isShow ? (
     <div className="fixed w-fit right-3 md:right-10 lg:right-5 bottom-10">

@@ -25,23 +25,22 @@ export default function HeroImage() {
           </a>
         </div>
 
-        <div className="flex flex-col">
-          <div className="flex items-start justify-between flex-col gap-3 sm:gap-6 md:flex-row lg:gap-10 text-center font-thin text-2xl md:text-xl mx-auto py-10 text-muted-foreground">
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
-              Премиум табаки
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
-              Опытные мастера
-            </div>
-            <div className="flex items-center gap-3">
-              <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
-              Изысканные миксы
-            </div>
+        <div className="flex items-start justify-between flex-col gap-3 sm:gap-6 md:flex-row lg:gap-10 text-center font-thin text-2xl md:text-xl mx-auto py-10 text-muted-foreground">
+          <div className="flex items-center gap-3">
+            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+            Премиум табаки
+          </div>
+          <div className="flex items-center gap-3">
+            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+            Опытные мастера
+          </div>
+          <div className="flex items-center gap-3">
+            <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
+            Изысканные миксы
           </div>
         </div>
       </div>
+
       <div className="absolute left-10 top-40 h-72 w-72 animate-float rounded-full bg-primary blur-3xl bg-gradient-to-br to-50% to-muted"></div>
       <div className="absolute right-5 bottom-5 h-72 w-72 animate-float rounded-full bg-primary blur-3xl bg-gradient-to-bl to-50% to-muted"></div>
     </section>
