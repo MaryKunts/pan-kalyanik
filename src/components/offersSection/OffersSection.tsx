@@ -39,7 +39,7 @@ export default function OffersSection() {
         <section className=" bg-backgroud via-background py-20 px-20 sm:px-40 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-[repeat(4,300px)] sm:grid-rows-[repeat(2,350px)] md:grid-rows-[repeat(4,350px)] lg:grid-rows-[repeat(2,350px)] gap-10 lg:gap-20 w-full animate-fade-in-long">
             <Link
-              href={ROUTES.HOOKAHPLACE_PAGE}
+              href={ROUTES.HOOKAH_BAR_PAGE}
               className="flex items-end justify-center border-1 border-border rounded-lg bg-hookahplace shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Кальянная

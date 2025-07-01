@@ -1,4 +1,4 @@
 export const ROUTES = {
   ROOT: "/",
-  HOOKAHPLACE_PAGE: "hookahplace",
+  HOOKAH_BAR_PAGE: "hookah_bar",
 };
