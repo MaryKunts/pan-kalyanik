@@ -1,6 +1,6 @@
-import { AdvantagesSection } from "@/components/advantagesSection";
-import { HeroImage } from "@/components/heroImage";
-import { OffersSection } from "@/components/offersSection";
+import { AdvantagesSection } from "@/app/components/advantagesSection";
+import { HeroImage } from "@/app/components/heroImage";
+import { OffersSection } from "@/app/components/offersSection";
 
 export default function Home() {
   return (
