@@ -47,7 +47,7 @@ export default function HookahplacePage() {
         </Modal>
       </section>
 
-      <section className="my-20 mx-auto font-thin lg:text-xl flex flex-col items-center justify-center text-center max-w-10/12 gap-9">
+      <section className="my-20 mx-auto font-thin md:text-lg lg:text-2xl flex flex-col items-center justify-center text-center max-w-10/12 gap-9">
         <div>
           У нас более <span className="text-gradient">30 настольных игр</span>,
           чтобы весело провести время в компании друзей. Авторское меню
