@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <div className="flex z-20 justify-between items-center py-4 px-5 sticky top-0 bg-background border-b-1 border-b-border">
       <Link href={ROUTES.ROOT} onNavigate={handleNavigation}>
-        <div className="flex items-center gap-2 text-gradient text-xl md:text-2xl font-heading font-semibold">
+        <div className="flex items-center gap-2 text-gradient text-lg sm:text-xl md:text-2xl font-heading font-semibold">
           <Image
             src="/pan-kalyanik-logo.png"
             alt="Логотип"
