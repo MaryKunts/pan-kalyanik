@@ -1,6 +1,5 @@
 import { Map, Pin, AdvancedMarker } from "@vis.gl/react-google-maps";
-import { PanKalyanikContacts } from "@/const/contacts";
-import { PanKalyanikCoord } from "./const";
+import { PanKalyanik } from "@/const/panKalyanik";
 
 export default function ContactsSection() {
   return (
@@ -13,25 +12,25 @@ export default function ContactsSection() {
           mapId="pan_kalyanik"
           style={{ width: "100%", height: "350px" }}
           defaultCenter={{
-            lat: PanKalyanikCoord.centerLat,
-            lng: PanKalyanikCoord.centerLng,
+            lat: PanKalyanik.coords.centerLat,
+            lng: PanKalyanik.coords.centerLng,
           }}
           defaultZoom={17}>
           <AdvancedMarker
             position={{
-              lat: PanKalyanikCoord.lat,
-              lng: PanKalyanikCoord.lng,
+              lat: PanKalyanik.coords.lat,
+              lng: PanKalyanik.coords.lng,
             }}>
             <Pin />
           </AdvancedMarker>
         </Map>
         <div className="w-full flex flex-col text-center justify-center items-center">
-          <div>{PanKalyanikContacts.adress}</div>
+          <div>{PanKalyanik.contacts.adress}</div>
           <div className="font-thin pb-3.5">
             Вход со стороны внутреннего дворика
           </div>
-          <div>{PanKalyanikContacts.workingHours[0]}</div>
-          <div>{PanKalyanikContacts.workingHours[1]}</div>
+          <div>{PanKalyanik.contacts.workingHours[0]}</div>
+          <div>{PanKalyanik.contacts.workingHours[1]}</div>
         </div>
       </div>
     </section>

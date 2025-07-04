@@ -1,4 +1,5 @@
-import { PanKalyanikContacts } from "@/const/contacts";
+import { PanKalyanik } from "@/const/panKalyanik";
+import { getTelLink } from "@/utils/getCleanedTel";
 import Link from "next/link";
 
 export default function BookTableSection() {
@@ -16,9 +17,9 @@ export default function BookTableSection() {
             Написать в Инстаграм
           </button>
         </Link>
-        <a href={`tel:${PanKalyanikContacts.telHref}`}>
+        <a href={getTelLink(PanKalyanik.contacts.tel)}>
           <button className="flex items-center justify-center py-6 px-8 h-11 cursor-pointer rounded-md border border-white ring-offset-background bg-background text-white font-medium text-lg transition-colors duration-300 hover:text-primary hover:bg-white">
-            {`Позвонить ${PanKalyanikContacts.tel}`}
+            {`Позвонить ${PanKalyanik.contacts.tel}`}
           </button>
         </a>
       </div>
