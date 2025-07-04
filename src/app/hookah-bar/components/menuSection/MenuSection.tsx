@@ -5,7 +5,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../ui/carousel";
+} from "../../../../components/ui/carousel";
 
 const menuUrls = [
   "/menu_1.png",

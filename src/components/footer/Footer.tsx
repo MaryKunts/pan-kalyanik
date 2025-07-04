@@ -1,15 +1,20 @@
+import { PanKalyanik } from "@/const/panKalyanik";
+import { getTelLink } from "@/utils/getCleanedTel";
+
 export default function Footer() {
   return (
     <div className="flex justify-center items-center font-thin flex-col py-5 border-t-1 border-t-border">
       <div className="flex min-w-7/12 lg:w-9/12 xl:justify-center xl:gap-20 justify-between mt-5 text-sm">
         <div className="flex flex-col">
-          <div>г.Брест, ул. Карбышева 28</div>
-          <div>пн-чт: 14:00-2:00</div>
-          <div>пт-вс: 14:00-4:00</div>
+          <div>{PanKalyanik.contacts.adress}</div>
+          <div>{PanKalyanik.contacts.workingHours[0]}</div>
+          <div>{PanKalyanik.contacts.workingHours[1]}</div>
         </div>
         <div className="flex items-end md:items-start">
-          <a className="no-underline hover:underline" href="tel:375336441144">
-            375(33)644-11-44
+          <a
+            className="no-underline hover:underline"
+            href={getTelLink(PanKalyanik.contacts.tel)}>
+            {PanKalyanik.contacts.tel}
           </a>
         </div>
       </div>
