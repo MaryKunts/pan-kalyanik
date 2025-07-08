@@ -103,12 +103,12 @@ export default function RentInstructionSection() {
                 {title}
                 {items && (
                   <ul className="list-disc pl-6 pt-3">
-                    {items.map((li) => {
+                    {items.map((textItem) => {
                       return (
                         <li
-                          key={li}
+                          key={textItem}
                           className="font-thin marker:text-accent text-muted-foreground">
-                          {li}
+                          {textItem}
                         </li>
                       );
                     })}
