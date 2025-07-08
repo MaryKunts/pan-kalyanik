@@ -86,7 +86,7 @@ export default function RentInstructionSection() {
           alt=""
           width={300}
           height={600}
-          className="absolute hidden lg:block bottom-30 right-10 2xl:rigth-30 -scale-x-100"
+          className="absolute hidden lg:block bottom-30 right-10 2xl:right-30 -scale-x-100"
         />
         {listItems.map(({ title, items }, index) => {
           return (
