@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const listItems = [
   {
-    title: "Подготовь всё необходимое, из комплекта аренды у тебя должны быть:",
+    title: "Забери свой кальян из Пан Кальяник",
+  },
+  {
+    title: "Проверь комплект аренды, у тебя должны быть:",
     items: [
       "Колба",
       "Шахта с блюдцем и уплотнителем",
@@ -96,10 +99,10 @@ export default function RentInstructionSection() {
               <div className="h-16 w-16 rounded-full bg-gradient flex items-center justify-center text-2xl font-semibold">
                 {index + 1}
               </div>
-              <li className="flex  flex-col font-semibold text-xl max-w-8/12">
+              <li className="flex  flex-col font-semibold text-xl self-center max-w-8/12">
                 {title}
                 {items && (
-                  <ul className="list-disc">
+                  <ul className="list-disc pl-6 pt-3">
                     {items.map((li) => {
                       return (
                         <li

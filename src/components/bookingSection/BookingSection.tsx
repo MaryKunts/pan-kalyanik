@@ -23,7 +23,7 @@ export default function BookingSection({
         </Link>
         <a href={getTelLink(PanKalyanik.contacts.tel)}>
           <button className="flex items-center justify-center py-6 px-8 h-11 cursor-pointer rounded-md border border-white ring-offset-background bg-background text-white font-medium text-lg transition-colors duration-300 hover:text-primary hover:bg-white">
-            {`Позвонить ${PanKalyanik.contacts.tel}`}
+            Позвонить нам
           </button>
         </a>
       </div>
