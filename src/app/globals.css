@@ -94,6 +94,7 @@
   .bg-autsource {
     background: url(/autsource.png) center center/cover no-repeat;
   }
+
   .transition-modal {
     &.enter {
       transform: translateY(100%);
