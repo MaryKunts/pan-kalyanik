@@ -1,6 +1,7 @@
 import { AdvantagesSection } from "@/app/components/advantagesSection";
 import { HeroImage } from "@/app/components/heroImage";
 import { OffersSection } from "@/app/components/offersSection";
+import { BlogSection } from "./components/blogSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroImage />
       <OffersSection />
       <AdvantagesSection />
+      <BlogSection />
     </main>
   );
 }
