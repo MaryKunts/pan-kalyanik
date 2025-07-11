@@ -52,11 +52,13 @@ export default function OffersSection() {
                 Аренда кальяна
               </h3>
             </Link>
-            <div className="flex items-end justify-center border-1 border-border rounded-lg bg-catering shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
+            <Link
+              href={ROUTES.CATERING_PAGE}
+              className="flex items-end justify-center border-1 border-border rounded-lg bg-catering shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Кейтеринг
               </h3>
-            </div>
+            </Link>
             <div className="flex items-end justify-center border-1 border-border rounded-lg bg-autsource shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Аутсорс и сотрудничество
