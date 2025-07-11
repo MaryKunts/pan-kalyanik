@@ -6,7 +6,7 @@ export default function AdvantagesSection() {
       <h2 className="font-heading text-3xl md:text-5xl text-center font-bold">
         Почему <span className="text-gradient">Пан КальяНик</span>?
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 pt-15">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 pt-15">
         <div className="flex flex-col justify-center items-center p-6 rounded-lg border border-border bg-card-gradient shadow-sm text-card-foreground text-center hover:border-primary/50 transition-all duration-300 group">
           <div className="flex justify-center items-center bg-gradient rounded-full w-16 h-16 transition-transform duration-300 group-hover:scale-110">
             <Image
