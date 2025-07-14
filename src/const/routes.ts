@@ -3,4 +3,5 @@ export const ROUTES = {
   HOOKAH_RENT_PAGE: "rent",
   HOOKAH_BAR_PAGE: "hookah-bar",
   CATERING_PAGE: "catering",
+  AUTSOURCE_PAGE: "autsource",
 };

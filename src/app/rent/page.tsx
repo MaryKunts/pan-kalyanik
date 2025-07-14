@@ -1,12 +1,15 @@
 import { RentCardsSection } from "@/app/rent/components/rentCardsSection";
-import { RentMainSection } from "@/app/rent/components/rentMainSection";
 import { RentInstructionSection } from "./components/rentInstructionSection";
 import { BookingSection } from "@/components/bookingSection";
+import { MainSection } from "@/components/mainSection";
 
 export default function RentPage() {
   return (
     <>
-      <RentMainSection />
+      <MainSection
+        title="Аренда кальяна"
+        description="Комфортный отдых не выходя из дома"
+      />
       <RentCardsSection />
       <RentInstructionSection />
       <BookingSection title="Закажи свой кальян прямо сейчас!" />
