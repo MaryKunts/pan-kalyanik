@@ -21,7 +21,7 @@ export default function BlogSection() {
           <h3 className="font-heading font-semibold text-2xl text-center lg:text-left">
             Подпишись на блог Пана
           </h3>
-          <div className="text-muted-foreground flex flex-col gap-3">
+          <div className="text-muted-foreground flex flex-col gap-3 font-thin text-lg">
             <p>
               Всё самое интересное в одном месте: тренды, новинки, обзоры
               табаков
