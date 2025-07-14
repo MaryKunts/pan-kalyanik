@@ -1,3 +1,4 @@
+import { BookingSection } from "@/components/bookingSection";
 import { CateringAdvantagesSection } from "./components/cateringAdvantagesSection";
 import { CateringImagesSection } from "./components/cateringImagesSection";
 import { CateringMainSection } from "./components/cateringMainSection";
@@ -12,6 +13,10 @@ export default function CateringPage() {
       <CateringTerms />
       <CateringStepsSection />
       <CateringImagesSection />
+      <BookingSection
+        title="Забронируй кальянный кейтеринг"
+        subtitle="Оставь заявку и мы всё организуем"
+      />
     </>
   );
 }
