@@ -15,7 +15,7 @@ export default function BlogSection() {
           alt=""
           width={400}
           height={300}
-          className="self-center rounded-lg border-2 border-border brightness-90 transition-all duration-300 hover:border-accent"
+          className="self-center rounded-lg border-2 border-border brightness-90 transition-all duration-300 hover:border-primary/50 hover:brightness-105 hover:shadow-lg hover:shadow-primary"
         />
         <div className="flex flex-col gap-5 pt-3">
           <h3 className="font-heading font-semibold text-2xl text-center lg:text-left">
