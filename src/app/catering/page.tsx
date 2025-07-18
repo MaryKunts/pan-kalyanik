@@ -1,14 +1,17 @@
 import { BookingSection } from "@/components/bookingSection";
 import { CateringAdvantagesSection } from "./components/cateringAdvantagesSection";
 import { CateringImagesSection } from "./components/cateringImagesSection";
-import { CateringMainSection } from "./components/cateringMainSection";
 import { CateringStepsSection } from "./components/cateringStepsSection";
 import { CateringTerms } from "./components/cateringTerms";
+import { MainSection } from "@/components/mainSection";
 
 export default function CateringPage() {
   return (
     <>
-      <CateringMainSection />
+      <MainSection
+        title="Кальянный кейтеринг"
+        description="Создаем дымную атмосферу на вашем мероприятии, где бы оно ни проходило"
+      />
       <CateringAdvantagesSection />
       <CateringTerms />
       <CateringStepsSection />

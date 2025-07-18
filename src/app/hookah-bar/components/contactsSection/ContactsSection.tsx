@@ -1,3 +1,5 @@
+"use client";
+
 import { APIProvider } from "@vis.gl/react-google-maps";
 import { Map, Pin, AdvancedMarker } from "@vis.gl/react-google-maps";
 import Link from "next/link";
