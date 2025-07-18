@@ -12,7 +12,7 @@ export default function BookingSection({
   subtitle = "Свяжись с нами и обеспечь себе яркий вечер",
 }: Props) {
   return (
-    <section className="bg-gradient py-20 text-center">
+    <section className="bg-gradient py-20 text-center px-5">
       <h3 className="font-heading font-bold text-3xl md:text-4xl ">{title}</h3>
       <div className="text-xl text-center mt-2">{subtitle}</div>
       <div className="flex justify-center flex-col md:flex-row gap-7 items-center my-10">

@@ -2,14 +2,14 @@ import { ImageCarousel } from "@/components/imageCarousel";
 
 export default function BarAboutSection() {
   return (
-    <section className="my-20 mx-auto font-thin md:text-xl flex flex-col items-center justify-center text-center max-w-10/12 gap-9">
+    <section className="my-20 mx-auto font-thin md:text-xl flex flex-col items-center justify-center text-center max-w-10/12 gap-7">
       <div>
         У нас более <span className="text-gradient">30 настольных игр</span>,
         чтобы весело провести время в компании друзей. Авторское меню коктейлей
         дополнит вечер, а разнообразие табаков и профессиональная подача кальяна
         превратят ваш визит в настоящее удовольствие.
       </div>
-
+      <div className="w-5/12 mx-auto h-[1px] bg-muted-foreground"></div>
       <div>
         Для компаний и ценителей уединённого отдыха мы предлагаем
         <span className="text-gradient"> две просторные VIP-зоны</span>. Одна —
@@ -17,7 +17,7 @@ export default function BarAboutSection() {
         вечера или геймерской сессии. Вторая — с большим столом и телевизором,
         отлично подходит для дружеских встреч, игр и просмотра трансляций.
       </div>
-
+      <div className="w-5/12 mx-auto h-[1px] bg-muted-foreground"></div>
       <div>
         Мы регулярно показываем
         <span className="text-gradient"> спортивные и киберспортивные </span>

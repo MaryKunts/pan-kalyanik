@@ -6,7 +6,7 @@ import { PanKalyanik } from "@/const/panKalyanik";
 export default function ContactsSection() {
   return (
     <APIProvider apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? ""}>
-      <section className="flex flex-col items-center justify-center w-10/12 mx-auto pb-5 gap-10">
+      <section className="flex flex-col items-center justify-center w-10/12 mx-auto pb-20 gap-10">
         <div className="text-2xl md:text-3xl text-center font-heading font-semibold">
           Мы находимся{" "}
           <Link

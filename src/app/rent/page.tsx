@@ -9,7 +9,10 @@ export default function RentPage() {
       <RentMainSection />
       <RentCardsSection />
       <RentInstructionSection />
-      <BookingSection title="Закажи свой кальян прямо сейчас!" />
+      <BookingSection
+        title="Закажи свой кальян прямо сейчас!"
+        subtitle="Комфорт, вкус и атмосфера приедут к тебе"
+      />
     </>
   );
 }
