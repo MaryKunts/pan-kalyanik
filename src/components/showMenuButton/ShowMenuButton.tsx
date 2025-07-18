@@ -7,6 +7,7 @@ import { useModal } from "@/hooks/useModal";
 
 export default function ShowMenuButton() {
   const { openModal, isOpen, closeModal } = useModal();
+
   return (
     <>
       <Button size={"lg"} className="text-lg" onClick={openModal}>

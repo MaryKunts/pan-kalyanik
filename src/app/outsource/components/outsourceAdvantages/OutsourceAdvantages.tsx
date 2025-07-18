@@ -27,7 +27,7 @@ const advantages = [
   },
 ];
 
-export default function AutsourceAdvantages() {
+export default function OutsourceAdvantages() {
   return (
     <section className="px-10 md:px-20 2xl:px-40 py-20">
       <h2 className="font-semibold font-heading text-center text-gradient text-3xl lg:text-5xl">

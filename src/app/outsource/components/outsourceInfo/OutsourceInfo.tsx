@@ -5,7 +5,7 @@ const terms = [
   "Особых условий (брендинг, эксклюзивные смеси, оформление зоны и т.д.)",
 ];
 
-export default function AutsourceInfo() {
+export default function OutsourceInfo() {
   return (
     <section className="bg-card/30 px-10 md:px-20 2xl:px-40 py-20">
       <h2 className="text-2xl font-thin">
@@ -21,7 +21,7 @@ export default function AutsourceInfo() {
           </li>
         ))}
       </ul>
-      <div className="text-2xl font-[300] pt-10 text-center">
+      <div className="text-2xl font-light pt-10 text-center">
         Доверьтесь профессионалам и мы сделаем так, чтобы кальян стал сильной
         стороной Вашего бизнеса
       </div>

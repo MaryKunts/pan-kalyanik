@@ -3,7 +3,7 @@ import { ImageCarousel } from "@/components/imageCarousel";
 export default function CateringImageesSection() {
   return (
     <section className="px-5 py-20 bg-background flex flex-col items-center gap-15">
-      <h2 className="text-2xl md:text-3xl text-center font-[300] px-10">
+      <h2 className="text-2xl md:text-3xl text-center font-light px-10">
         Наша команда заботится о каждой детали, чтобы вы и ваши гости могли
         наслаждаться процессом без лишних забот
       </h2>

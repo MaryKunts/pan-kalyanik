@@ -18,7 +18,7 @@ const offers = [
   },
 ];
 
-export default function AutsourceOffers() {
+export default function OutsourceOffers() {
   return (
     <section className="px-10 md:px-20 xl:px-40 py-20">
       <div className="font-thin text-2xl text-center pb-5">
@@ -45,7 +45,7 @@ export default function AutsourceOffers() {
               />
               <div className="absolute w-[1px] h-8/12 md:h-7/12 bg-muted-foreground top-10 left-16"></div>
               <div className="pl-4">
-                <h3 className="text-xl md:text-2xl pb-5 pl-13 font-[300]">
+                <h3 className="text-xl md:text-2xl pb-5 pl-13 font-light">
                   {title}
                 </h3>
                 <p className="pl-10 text-lg md:text-xl font-thin text-muted-foreground">
