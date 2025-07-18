@@ -18,7 +18,7 @@ export default function BlogSection() {
           className="self-center rounded-lg border-2 border-border brightness-90 transition-all duration-300 hover:border-accent"
         />
         <div className="flex flex-col gap-5 pt-3">
-          <h3 className="font-[300] text-2xl text-center lg:text-left">
+          <h3 className="font-light text-2xl text-center lg:text-left">
             Подпишись на блог Пана
           </h3>
           <div className="text-muted-foreground flex flex-col gap-3 font-thin text-lg">

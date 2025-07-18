@@ -33,7 +33,7 @@ export default function CateringStepsSection() {
               <div className="w-16 h-16 bg-gradient rounded-full text-xl font-semibold flex items-center justify-center">
                 {index + 1}
               </div>
-              <h4 className="font-[400] text-lg">{title}</h4>
+              <h4 className="font-normal text-lg">{title}</h4>
               <p className="text-muted-foreground font-thin">{description}</p>
             </div>
           );
