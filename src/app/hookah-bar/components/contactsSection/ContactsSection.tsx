@@ -12,6 +12,8 @@ export default function ContactsSection() {
         <div className="text-2xl md:text-3xl text-center font-heading font-semibold">
           Мы находимся{" "}
           <Link
+            rel="canonical"
+            target="_bank"
             href={PanKalyanik.location}
             className="text-gradient hover:underline hover:text-shadow-2xs">
             тут

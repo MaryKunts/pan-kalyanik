@@ -31,8 +31,10 @@ export default function BlogSection() {
               живёт индустрия
             </p>
             <p>Здесь дым это не просто стиль, а целая культура</p>
-            <Button className="w-[200px] 2xl:w-[400px] flex items-center justify-center p-5 font-semibold text-lg mt-5 mx-auto">
-              <Link href={PKN_BLOG}>Подписаться</Link>
+            <Button className="w-[200px] 2xl:w-[400px] flex items-center justify-center p-5 font-medium text-lg mt-5 mx-auto">
+              <Link rel="canonical" target="_blank" href={PKN_BLOG}>
+                Подписаться
+              </Link>
             </Button>
           </div>
         </div>

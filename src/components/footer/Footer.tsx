@@ -1,5 +1,6 @@
 import { PanKalyanik } from "@/const/panKalyanik";
 import { getTelLink } from "@/utils/getCleanedTel";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -11,11 +12,12 @@ export default function Footer() {
           <div>{PanKalyanik.contacts.workingHours[1]}</div>
         </div>
         <div className="flex items-end md:items-start">
-          <a
+          <Link
+            rel="canonical"
             className="no-underline hover:underline"
             href={getTelLink(PanKalyanik.contacts.tel)}>
             {PanKalyanik.contacts.tel}
-          </a>
+          </Link>
         </div>
       </div>
     </div>
