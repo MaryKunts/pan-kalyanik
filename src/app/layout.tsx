@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -14,11 +13,6 @@ const montserrat = Montserrat({
 const playfair = Playfair_Display({
   subsets: ["cyrillic"],
 });
-
-export const metadata: Metadata = {
-  title: "Пан КальяНик",
-  description: "Аренда кальянов в Бресте",
-};
 
 export default function RootLayout({
   children,

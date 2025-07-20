@@ -39,6 +39,7 @@ export default function OffersSection() {
         <section className=" bg-backgroud via-background py-20 px-20 sm:px-40 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-[repeat(4,300px)] lg:grid-rows-[repeat(2,350px)] gap-10 lg:gap-20 w-full animate-fade-in-long">
             <Link
+              rel="canonical"
               href={ROUTES.HOOKAH_BAR_PAGE}
               className="flex items-end justify-center border-1 border-border rounded-lg bg-hookahplace shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
@@ -46,6 +47,7 @@ export default function OffersSection() {
               </h3>
             </Link>
             <Link
+              rel="canonical"
               href={ROUTES.HOOKAH_RENT_PAGE}
               className="flex items-end justify-center border-1 border-border rounded-lg bg-hookah shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
@@ -53,6 +55,7 @@ export default function OffersSection() {
               </h3>
             </Link>
             <Link
+              rel="canonical"
               href={ROUTES.CATERING_PAGE}
               className="flex items-end justify-center border-1 border-border rounded-lg bg-catering shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
@@ -60,7 +63,8 @@ export default function OffersSection() {
               </h3>
             </Link>
             <Link
-              href={ROUTES.AUTSOURCE_PAGE}
+              rel="canonical"
+              href={ROUTES.OUTSOURCE_PAGE}
               className="flex items-end justify-center border-1 border-border rounded-lg bg-autsource shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Аутсорс и сотрудничество

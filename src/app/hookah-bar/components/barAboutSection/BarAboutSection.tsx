@@ -4,7 +4,7 @@ export default function BarAboutSection() {
   return (
     <section className="my-20 mx-auto font-thin md:text-xl flex flex-col items-center justify-center text-center max-w-10/12 gap-7">
       <div>
-        У нас более <span className="text-gradient">30 настольных игр</span>,
+        У нас более <span className="text-gradient">60 настольных игр</span>,
         чтобы весело провести время в компании друзей. Авторское меню коктейлей
         дополнит вечер, а разнообразие табаков и профессиональная подача кальяна
         превратят ваш визит в настоящее удовольствие.
