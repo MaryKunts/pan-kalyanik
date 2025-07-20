@@ -16,7 +16,7 @@ export default function HeroImage() {
           <div className="text-muted-foreground font-thin text-xl md:text-2xl lg:text-3xl text-center mt-10 md:mt-20 mb-5 mx-auto max-w-3xl">
             Погрузитесь в атмосферу премиального отдыха и ароматного дыма.
             Профессиональный подход, качественный табак и безупречный сервис на
-            любой площадке.
+            любой площадке
           </div>
           <a
             href="https://web.telegram.org/a/#1027116316"
