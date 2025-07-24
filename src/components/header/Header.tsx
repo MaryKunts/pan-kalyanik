@@ -26,6 +26,7 @@ export default function Header() {
       <Link rel="canonical" href={ROUTES.ROOT} onNavigate={handleNavigation}>
         <div className="flex items-center gap-2 text-gradient text-lg sm:text-xl md:text-2xl font-heading font-semibold">
           <Image
+            priority
             src="/pan-kalyanik-logo.png"
             alt="Логотип"
             width={80}

@@ -6,7 +6,7 @@ export default function HeroImage() {
     <section className="min-h-[calc(100vh-113px)] flex justify-center bg-gradient-to-br to-muted via-background md:pb-16 lg:pt-24  animate-fade-in">
       <div className="relative z-10 flex flex-col items-center justify-around px-5 md:px-20">
         <div>
-          <div className="font-heading text-gradient text-5xl sm:text-5xl md:text-7xl text-center font-bold">
+          <div className="font-heading text-gradient text-4xl sm:text-5xl md:text-7xl text-center font-bold">
             Пан КальяНик
           </div>
           <div className="font-heading text-foreground text-3xl sm:text-4xl md:text-6xl text-center font-bold">
@@ -25,7 +25,7 @@ export default function HeroImage() {
           </a>
         </div>
 
-        <div className="flex items-start justify-between flex-col gap-3 sm:gap-6 md:flex-row lg:gap-10 text-center font-thin text-2xl md:text-xl mx-auto py-10 text-muted-foreground">
+        <div className="flex items-start justify-between flex-col gap-3 sm:gap-6 md:flex-row lg:gap-10 text-center font-thin text-lg md:text-xl mx-auto py-10 text-muted-foreground">
           <div className="flex items-center gap-3">
             <FontAwesomeIcon icon={faStar} style={{ color: "#FFD43B" }} />
             Премиум табаки

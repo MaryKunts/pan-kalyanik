@@ -52,7 +52,7 @@ export const getCards = () => {
       subtitle: `${price} руб`,
       additionalInfo: [
         hookah,
-        `${bowls} с кальнной смесью`,
+        `${bowls} с кальянной смесью`,
         "Комплект угля и щипцы",
         "Плитка для углей",
       ],
