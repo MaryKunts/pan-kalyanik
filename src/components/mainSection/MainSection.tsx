@@ -23,7 +23,7 @@ export default function MainSection({
           {title}
         </h2>
       </div>
-      <div className="font-thin text-xl md:text-2xl lg:text-3xl text-center text-muted-foreground mx-auto max-w-10/12">
+      <div className="font-thin text-xl md:text-2xl lg:text-3xl text-center text-muted-foreground mx-auto max-w-10/12 pb-25">
         {description}
       </div>
       {children}
