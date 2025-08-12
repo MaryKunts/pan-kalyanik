@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { SOCIAL_MEDIA_LINKS } from "@/components/socialMediaLinks/const";
 
 export default function HeroImage() {
   return (
@@ -19,7 +20,7 @@ export default function HeroImage() {
             любой площадке
           </div>
           <a
-            href="https://web.telegram.org/a/#1027116316"
+            href={SOCIAL_MEDIA_LINKS.TELEGRAM}
             className="w-75 mt-10 mx-auto flex justify-center items-center bg-gradient text-primary-foreground rounded-md h-11 text-lg px-8 py-6  whitespace-nowrap font-medium ring-offset-background focus-visible:ring-ring focus-visible:ring-offset-2 md:hidden">
             Оформить заказ
           </a>
