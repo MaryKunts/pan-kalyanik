@@ -41,7 +41,7 @@ export default function OffersSection() {
             <Link
               rel="canonical"
               href={ROUTES.HOOKAH_BAR_PAGE}
-              className="flex items-end justify-center border-1 border-border rounded-lg bg-hookahplace shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
+              className="flex items-end justify-center border-1 border-border rounded-lg bg-hookahplace-winter shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Кальянная
               </h3>
@@ -49,7 +49,7 @@ export default function OffersSection() {
             <Link
               rel="canonical"
               href={ROUTES.HOOKAH_RENT_PAGE}
-              className="flex items-end justify-center border-1 border-border rounded-lg bg-hookah shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
+              className="flex items-end justify-center border-1 border-border rounded-lg bg-rent-winter shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Аренда кальяна
               </h3>
@@ -57,7 +57,7 @@ export default function OffersSection() {
             <Link
               rel="canonical"
               href={ROUTES.CATERING_PAGE}
-              className="flex items-end justify-center border-1 border-border rounded-lg bg-catering shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
+              className="flex items-end justify-center border-1 border-border rounded-lg bg-catering-winter shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Кейтеринг
               </h3>
@@ -65,7 +65,7 @@ export default function OffersSection() {
             <Link
               rel="canonical"
               href={ROUTES.OUTSOURCE_PAGE}
-              className="flex items-end justify-center border-1 border-border rounded-lg bg-autsource shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
+              className="flex items-end justify-center border-1 border-border rounded-lg bg-autsource-winter shadow-lg shadow-border cursor-pointer hover:shadow-primary hover:shadow-xl transition-all duration-300">
               <h3 className="w-full h-full rounded-lg transition-all duration-300 hover:font-medium hover:backdrop-brightness-50 flex flex-col-reverse text-center font-light text-shadow-lg text-2xl pb-5">
                 Аутсорс и сотрудничество
               </h3>

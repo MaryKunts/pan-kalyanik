@@ -8,8 +8,6 @@ import {
 } from "../../ui/carousel";
 
 const menuUrls = [
-  "/menu_1.png",
-  "/menu_2.png",
   "/menu_3.png",
   "/menu_4.png",
   "/menu_5.png",
@@ -18,6 +16,10 @@ const menuUrls = [
   "/menu_8.png",
   "/menu_9.png",
   "/menu_10.png",
+  "/menu_11.png",
+  "/menu_12.png",
+  "/menu_13.png",
+  "/menu_14.png",
 ];
 
 export default function MenuSection() {

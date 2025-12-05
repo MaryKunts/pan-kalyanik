@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Snowfall } from "@/components/snowfall";
 
 interface Props {
   title: string;
@@ -15,6 +16,7 @@ export default function MainSection({
 }: Props) {
   return (
     <section className="relative min-h-[calc(100vh-113px)] flex flex-col items-center justify-around px-5 md:px-20 py-10 via-background to-muted from-background bg-gradient-to-br animate-fade-in">
+      <Snowfall />
       <div>
         <h2 className="text-center text-xl sm:text-4xl md:text-3xl lg:text-5xl font-heading text-gradient font-bold">
           {subtitle}
