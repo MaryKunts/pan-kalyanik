@@ -16,7 +16,7 @@ export default function AdvantagesSection() {
               height={48}
             />
           </div>
-          <h4 className="font-heading font-semibold text-xl my-4">
+          <h4 className="flex items-center h-14 font-heading font-semibold text-xl my-4">
             Premium оборудование
           </h4>
           <div className="text-muted-foreground font-thin">
@@ -28,7 +28,7 @@ export default function AdvantagesSection() {
           <div className="flex justify-center items-center bg-gradient rounded-full w-16 h-16 transition-transform duration-300 group-hover:scale-110">
             <Image src="/handshake.png" alt="shine" width={48} height={48} />
           </div>
-          <h4 className="font-heading font-semibold text-xl my-4">
+          <h4 className="flex items-center h-14 font-heading font-semibold text-xl my-4">
             Безупречный сервис
           </h4>
           <div className="text-muted-foreground font-thin">
@@ -40,7 +40,7 @@ export default function AdvantagesSection() {
           <div className="flex justify-center items-center bg-gradient rounded-full w-16 h-16 transition-transform duration-300 group-hover:scale-110">
             <Image src="/notebook.png" alt="shine" width={48} height={48} />
           </div>
-          <h4 className="font-heading font-semibold text-xl my-4">
+          <h4 className="flex items-center h-14 font-heading font-semibold text-xl my-4">
             Индивидуальный подход
           </h4>
           <div className="text-muted-foreground font-thin">
@@ -52,7 +52,7 @@ export default function AdvantagesSection() {
           <div className="flex justify-center items-center bg-gradient rounded-full w-16 h-16 transition-transform duration-300 group-hover:scale-110">
             <Image src="/strawberry.png" alt="shine" width={48} height={48} />
           </div>
-          <h4 className="font-heading font-semibold text-xl my-4">
+          <h4 className="flex items-center h-14 font-heading font-semibold text-xl my-4">
             Широкий выбор вкусов и миксов
           </h4>
           <div className="text-muted-foreground font-thin">

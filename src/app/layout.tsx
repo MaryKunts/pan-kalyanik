@@ -2,9 +2,11 @@ import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { ScrollToTopButton } from "@/components/scrollToTopButton";
+
 config.autoAddCss = false;
 
 const montserrat = Montserrat({

@@ -82,17 +82,36 @@
     );
   }
 
-  .bg-hookah {
+  .bg-rent {
     background: url(/rent.png) center center/cover no-repeat;
   }
+
+  .bg-rent-winter {
+    background: url(/rent_winter.png) center center/cover no-repeat;
+  }
+
   .bg-catering {
     background: url(/catering.png) center center/cover no-repeat;
   }
+
+  .bg-catering-winter {
+    background: url(/catering_winter.png) center center/cover no-repeat;
+  }
+
   .bg-hookahplace {
     background: url(/hookahplace.png) center center/cover no-repeat;
   }
+
+  .bg-hookahplace-winter {
+    background: url(/hookahplace_winter.png) center center/cover no-repeat;
+  }
+
   .bg-autsource {
     background: url(/autsource.png) center center/cover no-repeat;
+  }
+
+  .bg-autsource-winter {
+    background: url(/autsource_winter.png) center center/cover no-repeat;
   }
 
   .transition-modal {
