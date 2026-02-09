@@ -3,7 +3,6 @@ import { AdvantagesSection } from "@/app/components/advantagesSection";
 import { HeroImage } from "@/app/components/heroImage";
 import { OffersSection } from "@/app/components/offersSection";
 import { BlogSection } from "./components/blogSection";
-import { Snowfall } from "@/components/snowfall";
 
 export const metadata: Metadata = {
   title: "Пан КальяНик | Кальянная, аренда и кейтеринг в Бресте",
@@ -16,7 +15,6 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="w-screen min-h-screen">
-      <Snowfall />
       <HeroImage />
       <OffersSection />
       <AdvantagesSection />

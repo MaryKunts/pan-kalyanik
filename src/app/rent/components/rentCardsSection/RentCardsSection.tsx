@@ -22,7 +22,7 @@ export default function RentCardsSection() {
         *Дополнительная кальянная смесь + уголь –– от
         <span className="text-gradient text-2xl font-semibold font-heading">
           {" "}
-          14 руб
+          18 руб
         </span>
       </div>
     </section>
