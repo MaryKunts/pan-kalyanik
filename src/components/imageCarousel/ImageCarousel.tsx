@@ -43,8 +43,15 @@ export default function ImageCarousel({ images, imageHeight }: Props) {
                   <div
                     key={`image-${url}`}
                     className="w-1/3 relative"
-                    style={{ height: imageHeight.lg }}>
-                    <Image src={url} alt="" fill objectFit="cover" />
+                    style={{ height: imageHeight.lg }}
+                  >
+                    <Image
+                      src={url}
+                      alt=""
+                      fill
+                      sizes="(max-width: 1023px) 100vw, 33vw"
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
@@ -56,8 +63,15 @@ export default function ImageCarousel({ images, imageHeight }: Props) {
               <div
                 key={`image-${url}`}
                 className="w-full relative"
-                style={{ height: imageHeight.sm ?? imageHeight.lg }}>
-                <Image src={url} alt="" fill objectFit="cover" />
+                style={{ height: imageHeight.sm ?? imageHeight.lg }}
+              >
+                <Image
+                  src={url}
+                  alt=""
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                />
               </div>
             </CarouselItem>
           ))}

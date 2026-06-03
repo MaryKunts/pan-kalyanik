@@ -4,22 +4,31 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="flex justify-center items-center font-thin flex-col py-5 border-t-1 border-t-border">
-      <div className="flex min-w-7/12 lg:w-9/12 justify-between mt-5 text-sm">
-        <div className="flex flex-col">
-          <div>{PanKalyanik.contacts.adress}</div>
-          <div>{PanKalyanik.contacts.workingHours[0]}</div>
-          <div>{PanKalyanik.contacts.workingHours[1]}</div>
-        </div>
-        <div className="flex items-end md:items-start">
-          <Link
-            rel="canonical"
-            className="no-underline hover:underline"
-            href={getTelLink(PanKalyanik.contacts.tel)}>
-            {PanKalyanik.contacts.tel}
-          </Link>
+    <footer className="flex justify-center w-full px-4 py-5 sm:px-6 sm:py-6 border-t-1 border-t-border text-foreground/75">
+      <div className="w-full max-w-6xl text-center">
+        <div className="flex flex-col items-center gap-3 sm:gap-4 pb-2 sm:pb-4">
+          <div className="space-y-1.5 text-[11px] sm:text-xs leading-relaxed text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-sm font-medium text-foreground">
+              ООО &quot;НИКОЛИГРУПП&quot;
+            </p>
+            <p>
+              Адрес: БЕЛАРУСЬ, Г. БРЕСТ, УЛ. КАРБЫШЕВА, ДОМ 28, (ПОДВАЛЬНЫЙ
+              ЭТАЖ), 224005
+            </p>
+            <p>УНП: 291783822</p>
+            <p>
+              Телефон:
+              <Link
+                rel="canonical"
+                href={getTelLink(PanKalyanik.contacts.tel)}
+                className="underline-offset-2 hover:underline text-foreground"
+              >
+                {PanKalyanik.contacts.tel}
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

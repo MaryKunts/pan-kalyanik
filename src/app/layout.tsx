@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -8,6 +9,14 @@ import { Footer } from "@/components/footer";
 import { ScrollToTopButton } from "@/components/scrollToTopButton";
 
 config.autoAddCss = false;
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+};
 
 const montserrat = Montserrat({
   subsets: ["cyrillic"],

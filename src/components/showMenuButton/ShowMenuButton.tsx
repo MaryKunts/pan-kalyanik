@@ -1,21 +1,11 @@
-"use client";
-
+import Link from "next/link";
 import { Button } from "../ui/button";
-import { Modal } from "../modal";
-import { MenuSection } from "./menuSection";
-import { useModal } from "@/hooks/useModal";
+import { ROUTES } from "@/const/routes";
 
 export default function ShowMenuButton() {
-  const { openModal, isOpen, closeModal } = useModal();
-
   return (
-    <>
-      <Button size={"lg"} className="text-lg" onClick={openModal}>
-        Посмотреть меню
-      </Button>
-      <Modal inProp={isOpen} onClose={closeModal}>
-        <MenuSection />
-      </Modal>
-    </>
+    <Button size={"lg"} className="text-lg" asChild>
+      <Link href={ROUTES.MENU_PAGE}>Посмотреть меню</Link>
+    </Button>
   );
 }
