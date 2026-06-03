@@ -7,9 +7,9 @@ enum Sizes {
 }
 
 const prices: Record<Sizes, number> = {
-  [Sizes.S]: 55,
-  [Sizes.M]: 100,
-  [Sizes.L]: 140,
+  [Sizes.S]: 60,
+  [Sizes.M]: 105,
+  [Sizes.L]: 145,
 };
 
 const hookahAmount: Record<Sizes, number> = {

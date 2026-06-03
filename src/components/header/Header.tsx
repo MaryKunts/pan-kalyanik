@@ -22,17 +22,18 @@ export default function Header() {
   };
 
   return (
-    <div className="flex z-20 justify-between items-center py-4 px-5 sticky top-0 bg-background border-b-1 border-b-border">
+    <div className="flex z-20 justify-between items-center gap-2 py-3 px-3 sm:py-4 sm:px-5 sticky top-0 bg-background border-b-1 border-b-border">
       <Link rel="canonical" href={ROUTES.ROOT} onNavigate={handleNavigation}>
-        <div className="flex items-center gap-2 text-gradient text-lg sm:text-xl md:text-2xl font-heading font-semibold">
+        <div className="flex items-center gap-1.5 sm:gap-2 text-gradient text-base sm:text-xl md:text-2xl font-heading font-semibold min-w-0">
           <Image
             priority
             src="/logo.png"
             alt="Логотип"
             width={80}
             height={80}
+            className="h-11 w-11 sm:h-14 sm:w-14 md:h-16 md:w-16 shrink-0"
           />
-          Пан КальяНик
+          <span className="truncate">Пан КальяНик</span>
         </div>
       </Link>
       <SocialMediaLinks />

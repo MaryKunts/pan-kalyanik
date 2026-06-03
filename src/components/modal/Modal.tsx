@@ -11,9 +11,15 @@ interface Props {
   inProp: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  showCloseButton?: boolean;
 }
 
-export default function Modal({ inProp, children, onClose }: Props) {
+export default function Modal({
+  inProp,
+  children,
+  onClose,
+  showCloseButton = true,
+}: Props) {
   const modalRef = useRef(null);
   const [isHydrated, setIsHydrated] = useState(false);
 
@@ -27,6 +33,20 @@ export default function Modal({ inProp, children, onClose }: Props) {
     }
     return () => document.body.classList.remove("overflow-y-hidden");
   }, [inProp]);
+
+  useEffect(() => {
+    if (!inProp) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        onClose();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [inProp, onClose]);
 
   if (!isHydrated) return null;
 
@@ -43,19 +63,30 @@ export default function Modal({ inProp, children, onClose }: Props) {
         exit: "translate-y-0 transition-transform duration-300 ease",
         exitActive: "translate-y-full",
       }}
-      exit>
+      exit
+    >
       <div
         ref={modalRef}
-        className="z-30 fixed left-0 top-0 w-screen h-screen bg-background/90 flex justify-center">
-        <Button
-          variant={"outline"}
-          className="absolute w-10 h-10 z-30 cursor-pointer top-[5%] right-5 md:right-[20%] 2xl:right-[30%] rounded-full"
-          onClick={onClose}>
-          <FontAwesomeIcon icon={faXmark} size="2xl" />
-        </Button>
-        {children}
+        className="z-30 fixed inset-0 overflow-hidden bg-background/90 flex items-start sm:items-center justify-center p-2 sm:p-4 md:p-6"
+        onClick={onClose}
+      >
+        {showCloseButton && (
+          <Button
+            variant={"outline"}
+            className="absolute w-10 h-10 z-30 cursor-pointer top-4 right-4 sm:top-[5%] sm:right-5 md:right-[12%] 2xl:right-[22%] rounded-full"
+            onClick={onClose}
+          >
+            <FontAwesomeIcon icon={faXmark} size="2xl" />
+          </Button>
+        )}
+        <div
+          className="flex h-full w-full max-w-[980px] items-start sm:items-center justify-center"
+          onClick={(event) => event.stopPropagation()}
+        >
+          {children}
+        </div>
       </div>
     </CSSTransition>,
-    document.body
+    document.body,
   );
 }
