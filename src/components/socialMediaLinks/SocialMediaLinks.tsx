@@ -16,22 +16,25 @@ export default function SocialMediaLinks() {
         rel="canonical"
         href={SOCIAL_MEDIA_LINKS.VK}
         target="_blank"
-        className="block rounded-full transition-colors duration-300 hover:text-accent">
-        <FontAwesomeIcon icon={faVk} size="2xl" />
+        className="block rounded-full transition-colors duration-300 hover:text-accent"
+      >
+        <FontAwesomeIcon icon={faVk} className="text-xl lg:text-4xl" />
       </Link>
       <Link
         rel="canonical"
         href={SOCIAL_MEDIA_LINKS.INSTAGRAM}
         target="_blank"
-        className="block rounded-full transition-colors duration-300 hover:text-accent">
-        <FontAwesomeIcon icon={faInstagram} size="2xl" />
+        className="block rounded-full transition-colors duration-300 hover:text-accent"
+      >
+        <FontAwesomeIcon icon={faInstagram} className="text-xl lg:text-4xl" />
       </Link>
       <Link
         rel="canonical"
         href={SOCIAL_MEDIA_LINKS.TELEGRAM}
         target="_blank"
-        className="block rounded-full transition-colors duration-300 hover:text-accent">
-        <FontAwesomeIcon icon={faTelegram} size="2xl" />
+        className="block rounded-full transition-colors duration-300 hover:text-accent"
+      >
+        <FontAwesomeIcon icon={faTelegram} className="text-xl lg:text-4xl" />
       </Link>
     </div>
   );
