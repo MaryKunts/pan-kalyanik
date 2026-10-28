@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -20,13 +20,22 @@ export default function MenuSection({ onClose }: Props) {
   const [activeMainCategory, setActiveMainCategory] = useState<string | null>(
     null,
   );
-  const [activeBarSubcategory, setActiveBarSubcategory] = useState<string | null>(
-    null,
-  );
+  const [activeBarSubcategory, setActiveBarSubcategory] = useState<
+    string | null
+  >(null);
 
   const barCategory = mainMenuCategories.find(({ id }) => id === "bar");
   const scrollContainerRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const activeMainCategoryRef = useRef<string | null>(null);
+  const isProgrammaticScrollRef = useRef(false);
+  const programmaticScrollTimeoutRef = useRef<ReturnType<
+    typeof setTimeout
+  > | null>(null);
+
+  useEffect(() => {
+    activeMainCategoryRef.current = activeMainCategory;
+  }, [activeMainCategory]);
 
   const scrollToCategory = (categoryId: string) => {
     const container = scrollContainerRef.current;
@@ -40,11 +49,141 @@ export default function MenuSection({ onClose }: Props) {
       container.getBoundingClientRect().top +
       container.scrollTop;
 
+    isProgrammaticScrollRef.current = true;
+    if (programmaticScrollTimeoutRef.current) {
+      clearTimeout(programmaticScrollTimeoutRef.current);
+    }
+    programmaticScrollTimeoutRef.current = setTimeout(() => {
+      isProgrammaticScrollRef.current = false;
+    }, 700);
+
     container.scrollTo({
       top: targetTop - headerHeight - 8,
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    const subcategories = barCategory?.subcategories;
+
+    if (!container || !subcategories?.length) return;
+
+    const observedMainEntries = new Map<string, IntersectionObserverEntry>();
+    const observedBarEntries = new Map<string, IntersectionObserverEntry>();
+
+    const getClosestId = (
+      entriesMap: Map<string, IntersectionObserverEntry>,
+      activationLine: number,
+    ) => {
+      let closestId: string | null = null;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      for (const [id, entry] of entriesMap) {
+        if (!entry.isIntersecting) continue;
+
+        const distance = Math.abs(
+          entry.boundingClientRect.top - activationLine,
+        );
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestId = id;
+        }
+      }
+
+      return closestId;
+    };
+
+    const updateActiveFromScroll = () => {
+      if (isProgrammaticScrollRef.current) return;
+
+      const headerHeight = headerRef.current?.offsetHeight ?? 0;
+      const containerTop = container.getBoundingClientRect().top;
+      const activationLine = containerTop + headerHeight + 24;
+
+      const closestMainId = getClosestId(observedMainEntries, activationLine);
+
+      if (closestMainId && closestMainId !== activeMainCategoryRef.current) {
+        setActiveMainCategory(closestMainId);
+        activeMainCategoryRef.current = closestMainId;
+
+        if (closestMainId !== "bar") {
+          setActiveBarSubcategory(null);
+          return;
+        }
+      }
+
+      if (activeMainCategoryRef.current !== "bar") return;
+
+      const closestBarId = getClosestId(observedBarEntries, activationLine);
+      if (!closestBarId) return;
+
+      setActiveBarSubcategory((current) =>
+        current === closestBarId ? current : closestBarId,
+      );
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const sectionId = entry.target.id;
+
+          if (sectionId.startsWith("bar-")) {
+            observedBarEntries.set(sectionId.replace(/^bar-/, ""), entry);
+          } else {
+            observedMainEntries.set(sectionId, entry);
+          }
+        }
+        updateActiveFromScroll();
+      },
+      {
+        root: container,
+        rootMargin: `-${(headerRef.current?.offsetHeight ?? 0) + 8}px 0px -45% 0px`,
+        threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+      },
+    );
+
+    for (const { id } of mainMenuCategories) {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    }
+
+    for (const { id } of subcategories) {
+      const section = document.getElementById(`bar-${id}`);
+      if (section) observer.observe(section);
+    }
+
+    return () => {
+      observer.disconnect();
+      if (programmaticScrollTimeoutRef.current) {
+        clearTimeout(programmaticScrollTimeoutRef.current);
+      }
+    };
+  }, [barCategory?.subcategories]);
+
+  useEffect(() => {
+    if (!activeBarSubcategory) return;
+
+    const activeTab = document.querySelector(
+      `[data-bar-subcategory="${activeBarSubcategory}"]`,
+    );
+
+    if (!(activeTab instanceof HTMLElement)) return;
+
+    const navList = activeTab.closest("ul");
+    if (!(navList instanceof HTMLElement)) return;
+
+    const tabLeft = activeTab.offsetLeft;
+    const tabWidth = activeTab.offsetWidth;
+    const listWidth = navList.clientWidth;
+    const targetScrollLeft = tabLeft - listWidth / 2 + tabWidth / 2;
+
+    navList.scrollTo({
+      left: Math.max(0, targetScrollLeft),
+      behavior: "smooth",
+    });
+  }, [activeBarSubcategory]);
 
   const handleMainCategoryClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
@@ -52,9 +191,15 @@ export default function MenuSection({ onClose }: Props) {
   ) => {
     event.preventDefault();
     setActiveMainCategory(categoryId);
-    if (categoryId !== "bar") {
+    activeMainCategoryRef.current = categoryId;
+
+    if (categoryId === "bar") {
+      const firstSubcategoryId = barCategory?.subcategories?.[0]?.id ?? null;
+      setActiveBarSubcategory(firstSubcategoryId);
+    } else {
       setActiveBarSubcategory(null);
     }
+
     scrollToCategory(categoryId);
   };
 
@@ -63,6 +208,7 @@ export default function MenuSection({ onClose }: Props) {
     subcategoryId: string,
   ) => {
     event.preventDefault();
+    setActiveMainCategory("bar");
     setActiveBarSubcategory(subcategoryId);
     scrollToCategory(`bar-${subcategoryId}`);
   };
@@ -74,7 +220,7 @@ export default function MenuSection({ onClose }: Props) {
     >
       <header
         ref={headerRef}
-        className="sticky top-0 z-40 -mx-3 flex flex-col gap-3 border-b border-border bg-background px-3 py-3 shadow-[0_8px_24px_hsl(var(--background))] sm:-mx-6 sm:gap-4 sm:px-6 sm:py-4 md:-mx-8 md:px-8"
+        className="sticky -top-4 lg:-top-8 z-40 -mx-3 flex flex-col gap-3 border-b border-border bg-background px-3 py-3 shadow-[0_8px_24px_hsl(var(--background))] sm:-mx-6 sm:gap-4 sm:px-6 sm:py-4 md:-mx-8 md:px-8"
       >
         <div className="relative px-10 sm:px-12">
           <h3 className="text-center text-2xl sm:text-4xl md:text-5xl font-heading font-semibold text-gradient leading-tight">
@@ -117,6 +263,7 @@ export default function MenuSection({ onClose }: Props) {
                 <li key={id} className="shrink-0">
                   <a
                     href={`#bar-${id}`}
+                    data-bar-subcategory={id}
                     className={`inline-flex min-h-9 items-center rounded-full px-2.5 py-1 transition-colors whitespace-nowrap ${
                       activeBarSubcategory === id
                         ? "bg-secondary/20 text-secondary font-medium"
